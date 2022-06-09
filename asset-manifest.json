@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/books-library/static/css/main.2993643f.css",
+    "main.js": "/books-library/static/js/main.ed98c2e5.js",
+    "static/js/787.f5db70bc.chunk.js": "/books-library/static/js/787.f5db70bc.chunk.js",
+    "static/media/notfound.png": "/books-library/static/media/notfound.648063f4aeb7cfff3aff.png",
+    "static/media/book.png": "/books-library/static/media/book.4a713f3b9f19123c8192.png",
+    "static/media/profile.webp": "/books-library/static/media/profile.0cf9f818444f6f07d96b.webp",
+    "index.html": "/books-library/index.html",
+    "main.2993643f.css.map": "/books-library/static/css/main.2993643f.css.map",
+    "main.ed98c2e5.js.map": "/books-library/static/js/main.ed98c2e5.js.map",
+    "787.f5db70bc.chunk.js.map": "/books-library/static/js/787.f5db70bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2993643f.css",
+    "static/js/main.ed98c2e5.js"
+  ]
+}
