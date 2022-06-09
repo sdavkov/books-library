@@ -1,0 +1,34 @@
+.books-list {
+    height: calc(100vh - 148px - 38px);
+    padding: 10px 0;
+    flex: 1;
+
+    &_title {
+        text-align: center;
+    }
+
+    &_list {
+        height: calc(100% - 68px);
+        overflow: auto;
+        list-style-type: none;
+    }
+
+    &_progress {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .book-item_author {
+        padding: 5px 0;
+    }
+
+    .book-item_title {
+        padding: 5px 0;
+    }
+
+    .book-item_description {
+        padding: 5px 0;
+        font-size: 0.8rem;
+    }
+}

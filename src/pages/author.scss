@@ -1,0 +1,38 @@
+.author {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+
+    &_title {
+        margin: 20px;
+    }
+
+    &_form {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+
+        img {
+            max-height: 300px;
+        }
+
+        input {
+            width: 300px;
+        }
+
+        textarea {
+            width: 300px;
+        }
+    }
+
+    &_field {
+        margin-bottom: 20px;
+    }
+
+    &_buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+}

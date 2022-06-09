@@ -1,0 +1,22 @@
+.authors-list {
+    background-color: rgb(223, 219, 219);
+    height: 100%;
+    min-width: 290px;
+
+    &_title {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    &_progress {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}

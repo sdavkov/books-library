@@ -1,0 +1,21 @@
+.book-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    transition: 0.3s;
+    width: 100%;
+
+    .book-item_img {
+        flex: 0 0 100px;
+        text-align: center;
+
+        img {
+            max-height: 100px;
+            max-width: 100px;
+        }
+    }
+
+    .book-item_info {
+        padding: 0 5px;
+    }
+}
