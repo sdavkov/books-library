@@ -14,7 +14,7 @@ import bookImage from '../assets/book.png';
 const Book = () => {
 	const params = useParams();
 	const navigate = useNavigate();
-	const books = useAppSelector(store => store.books.books);
+	const {books, loading: booksLoading} = useAppSelector(store => store.books);
 	const authors = useAppSelector(store => store.authors.authors);
 	const [book, setBook] = useState<IBook>({
 		id: uuidv4(),
@@ -26,14 +26,12 @@ const Book = () => {
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		if (params.book_id) {
+		if (params.book_id && !booksLoading ) {
 			const book = books.find(book => book.id === params.book_id);
 			if (book)
 				setBook(book);
-			else
-				navigate('/');
 		}
-	}, [params, books, setBook]);
+	}, [params, books, booksLoading, setBook]);
 
 	const image_url = book.image_url ? book.image_url : bookImage;
 

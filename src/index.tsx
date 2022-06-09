@@ -13,6 +13,7 @@ import {
 import Catalog from './pages/Catalog';
 import Author from './pages/Author';
 import Book from './pages/Book';
+import NotFound from './pages/NotFound';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -28,6 +29,7 @@ root.render(
 						<Route path='author/:author_id' element={<Author />} />
 						<Route path='book/new' element={<Book />} />
 						<Route path='book/:book_id' element={<Book />} />
+						<Route path='*' element={<NotFound />} />
 					</Route>
 				</Routes>
 			</BrowserRouter>

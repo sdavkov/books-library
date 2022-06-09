@@ -11,7 +11,7 @@ import profile from '../assets/profile.webp';
 const Author = () => {
 	const params = useParams();
 	const navigate = useNavigate();
-	const authors = useAppSelector(store => store.authors.authors);
+	const {authors, loading: authorsLoading} = useAppSelector(store => store.authors);
 	const [author, setAuthor] = useState<IAuthor>({
 		id: uuidv4(),
 		name: '',
@@ -21,12 +21,10 @@ const Author = () => {
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
-		if (params.author_id) {
+		if (params.author_id && !authorsLoading) {
 			const author = authors.find(author => author.id === params.author_id);
 			if (author)
 				setAuthor(author);
-			else
-				navigate('/');
 		}
 	}, [params, authors, setAuthor]);
 
