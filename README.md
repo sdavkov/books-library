@@ -1,46 +1,44 @@
-# Getting Started with Create React App
+# Тестовое приложения на React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+Приложение выполенено в рамках тестовой задачи:
 
-## Available Scripts
+Реализовать небольшое SPA (single page application) с использованием последней версии react.\
+Тематика любая: справочник телефонных номеров, книжный магазин, менеджер заметок и т.п.
 
-In the project directory, you can run:
+Обязательные требования:
 
-### `npm start`
+ - набор данных должен состоять минимум из 2 связанных сущностей, примеры связанных сущностей: книга-автор, заметка-пользователь;
+ - введенные данные должны сохраняться на протяжении всей сессии браузера и не пропадать при перезагрузке страницы;
+ - необходимо использовать react-router и redux (минимум 1 mutation, 1 action и 1 getter);
+ - необходимо применить какой-нибудь набор стилей (bootstrap, bulma и т.п.);
+ - составить небольшой README, чтобы любому человеку было понятно, как пользоваться этим приложением;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Плюсом будет:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ - хранение данных на сервере (в файле с json, в sqlite и т.д.);
+ - поиск или фильтрация данных;
+ - возможность автогенерации данных;
+ - использование composition API при разработке компонентов react;
+ - использование линтера;
+ - использование typescript;
+ - привязать к логике работы приложения хотя бы один запрос к public API какого-нибудь интернет-ресурса (можно использовать axios);
+ - разбить общий фронт работ на несколько небольших ограниченных задач с описанием, сделать пометки, где не уложились/уложились в срок и почему;
+ - приложить капельку своей креативности, так как авторский, а не шаблонный проект, всегда интересней рассматривать и обсуждать.
 
-### `npm test`
+## Реализовано
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+В итоге реализовал небольшое SPA - Каталог книг.\
+Стек: react, redux, react-router, mui components, type script.\
 
-### `npm run build`
+Состояние redux синхронизируется с sessionStorage.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+При первоначальной инициализации приложение загружает данные из JSON файлов на сервере.\
+Дальнейшие модификации сохраняются только в redux.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+С помощью react-router реализован SPA со страницами: каталог, редактирование/добавление автора, редактирование/добавление книги, 404 страница.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Развертывание приложения
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- клонировать репозиторий
+- выполнить команду: `npm install`
+- запустить приложение с помощью команды: `npm start`
